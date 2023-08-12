@@ -1,0 +1,1001 @@
+*{ padding:0;margin:0;box-sizing: border-box; }
+body{ background-color: black;}
+
+/* page1 */
+/*   Navbar */
+
+.navheader{display:flex;;align-items:center;justify-content:space-between;position:absolute;width:100%;z-index:2;padding:20px;}
+.navheader .netflixHeading{color:red;cursor:pointer;}
+.navheader .linkHeading{text-decoration:none;}
+
+.navheader .signButton{font-size:1rem;padding:5px 20px;cursor:pointer;border-radius:7px;border:none;}
+.navheader .signin{background:white;}
+.navheader .signup{color:white;margin-left:5px;font-weight:bold;background:red;}
+
+.navheader .Button{font-size:1rem;padding:5px 20px;cursor:pointer;border-radius:7px;border:none;}
+.navheader .Account{background:white;}
+.navheader .LogOut{color:white;background-color:red;margin-left:5px;font-weight:bold;margin-right:10px;}
+
+
+/* /* Main * */
+
+.Main{height:80vh;color:white;}
+.mainChild{position:relative;width:100%;height:100%;background:blue;}
+.mainChild img{width:100%;height:100%;object-fit:cover;}
+.blackGradient{position:absolute;width:100%;height:100%;background: linear-gradient(90deg, #0f0f0fe4, #ffffff00);}
+
+.Main .contentBox{margin-bottom:10px;position:absolute;top:30%;width:90%;height:40vh;padding:20px;}
+.Main .movieTitle{font-weight:bold;}
+
+.Main .buttonBox .button{color:rgb(0, 0, 0);padding:10px 20px;}
+.Main .buttonBox{margin:10px 0;}
+.buttonBox .buttonPlay{background:white;border:1.7px solid white}
+.buttonBox .buttonWatchLater{margin-left:10px;border:1.7px solid white;background:none;color:white !important;}
+
+
+.Main .releaseDate{font-weight:bold;color:rgb(255, 255, 255);}
+.Main .overview{width:100%;margin:7px 0;}
+
+
+/* Row */
+.rowWise{color:white;font-weight:bold;padding:10px 10px 10px 0px !important;margin-left:20px;}
+.rowBox{position:relative;display:flex;align-items:center;margin-left:20px;}
+
+               /* // to hide scroll bar */
+.rowBox .slider{  height:100%;
+                  white-space: nowrap;   
+                  overflow-x:scroll;scroll-behavior:smooth;
+                  -ms-overflow-style: none; 
+                }
+.rowBox .slider .sliderContent{white-space:break-spaces ;cursor:pointer;position:relative;width:200px;padding:10px 10px 10px 0px !important;display:inline-block;}
+.rowBox .slider .sliderContent img{width:100%;height:auto;display:block;}
+
+                /* to hide scroll bar in row */
+.rowBox .slider::-webkit-scrollbar { width: 0 !important;display: none; }
+
+.sliderContent .hoverImage{display:flex;justify-content:center;align-items:center;color:white;position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;}
+.hoverImage .title{display:flex;flex-wrap:wrap;margin-left:10px;margin-right:10px;text-align:center;} 
+.sliderContent .hoverImage:hover{background:rgba(0,0,0,0.7);opacity:1;}
+.sliderContent .hoverImage .heartSave{position:absolute;top:20px;left:10px;}
+
+               /* left arrow in row image */
+.MdChevronLeft{cursor:pointer;opacity:0.7;display:none;background:white;width:30px;height:30px;z-index:2;border-radius:50%;}
+.MdChevronLeft:hover{opacity:1;}
+.rowBox:hover .MdChevronLeft{display:block;}
+
+                /* right arrow image */
+.MdChevronRight{cursor:pointer;opacity:0.7;display:none;background:white;width:30px;height:30px;z-index:2;border-radius:50%;}
+.MdChevronRight:hover{opacity:1;}
+.rowBox:hover .MdChevronRight{display:block;}
+
+
+@media only screen and (max-height:450px){
+  .navheader{padding:10px 20px;}
+  .navheader .signButton{font-size:1rem;padding:5px 20px;border-radius:7px;}
+  .navheader .signup{margin-left:5px;}
+  
+  .navheader .Button{font-size:1rem;padding:5px 20px;border-radius:7px;}
+  .navheader .Account{background:white;}
+  .navheader .LogOut{margin-left:5px;margin-right:10px;}
+  
+  .Main .contentBox{padding:10px 20px;}
+  .Main .movieTitle{font-size:1.8rem;}
+  .Main .buttonBox .button{padding:8px 20px;font-size:0.8rem}
+  .Main .buttonBox{margin:8px 0;}
+  .buttonBox .buttonWatchLater{margin-left:8px;}
+  .Main .releaseDate{font-size:0.9rem;}
+  .Main .overview{margin:7px 0;font-size:0.9rem}}
+  
+      @media only screen and ((max-height:450px) and (max-width:600px)){
+        .navheader{padding:10px 15px;}
+        .navheader .netflixHeading{font-size:1.8rem}
+        .navheader .signButton{font-size:0.8rem;padding:5px 20px;border-radius:7px;}
+        .navheader .signup{margin-left:5px;}  
+        .navheader .Button{font-size:0.8rem;padding:5px 20px;border-radius:7px;}
+        .navheader .LogOut{margin-left:5px;margin-right:10px;}
+        
+        .Main .contentBox{padding:10px 15px;}
+        .Main .movieTitle{font-size:1.6rem;}
+        .Main .buttonBox .button{padding:6px 15px;font-size:0.8rem}
+        .Main .buttonBox{margin:8px 0;}
+        .buttonBox .buttonPlay{border:1.6px solid white}
+        .buttonBox .buttonWatchLater{margin-left:8px;border:1.6px solid white;}
+        .Main .releaseDate{font-size:0.8rem;}
+        .Main .overview{margin:6px 0;font-size:0.8rem}
+
+        .rowWise{padding:10px 10px 10px 0px !important;margin-left:15px;font-size:1.3rem;}
+        .rowBox{margin-left:15px;}
+        
+          }
+      @media only screen and ((max-height:450px) and (max-width:400px)){
+        .navheader{padding:8px 15px;}
+        .navheader .netflixHeading{font-size:1.6rem}
+        .navheader .signButton{font-size:0.6rem;padding:5px 20px;border-radius:6px;}
+        .navheader .signup{margin-left:5px;}  
+        .navheader .Button{font-size:0.6rem;padding:5px 20px;border-radius:6px;}
+        .navheader .LogOut{margin-left:5px;margin-right:10px;}
+            
+        .Main .contentBox{padding:8px 15px;}
+        .Main .movieTitle{font-size:1.4rem;}
+        .Main .buttonBox .button{padding:4px 15px;font-size:0.7rem}
+        .Main .buttonBox{margin:8px 0;}
+        .buttonBox .buttonPlay{border:1.4px solid white}
+        .buttonBox .buttonWatchLater{margin-left:8px;border:1.4px solid white;}
+        .Main .releaseDate{font-size:0.7rem;}
+        .Main .overview{margin:6px 0;font-size:0.7rem}
+
+        .rowWise{padding:10px 10px 10px 0px !important;margin-left:15px;font-size:1.2rem;}
+        .rowBox{margin-left:15px;}
+        .rowBox .slider .sliderContent{width:130px;position:relative;padding:10px 10px 2px 0px !important;}
+
+        .hoverImage .title{margin-left:10px;margin-right:10px;font-size:0.8rem} 
+        .sliderContent .hoverImage .heartSave{width:15px;height:15px;top:15px;left:5px;}
+               /* left arrow in row image */
+        .MdChevronLeft{width:30px;height:30px;z-index:2;border-radius:50%;}
+                /* right arrow image */
+        .MdChevronRight{width:30px;height:30px;z-index:2;border-radius:50%;} 
+          }
+              
+      @media only screen and ((max-height:450px) and (max-width:300px)){
+        .navheader{padding:6px 10px;}
+        .navheader .netflixHeading{font-size:1.4rem}
+  
+        .navheader .signButton{font-size:0.5rem;padding:4px 15px;border-radius:4px;margin-bottom:5px;}
+        .navheader .signup{margin-left:5px;}  
+                
+        .navheader .Button{font-size:0.5rem;padding:4px 15px;border-radius:4px;margin-bottom:5px;}
+        .navheader .LogOut{margin-left:5px;margin-right:10px;}
+                
+        .Main .contentBox{padding:5px 10px;}
+        .Main .movieTitle{font-size:1.1rem;}
+        .Main .buttonBox .button{padding:2px 12px;font-size:0.7rem}
+        .Main .buttonBox{margin:8px 0;}
+        .buttonBox .buttonPlay{border:1.4px solid white}
+        .buttonBox .buttonWatchLater{margin-left:7px;border:1.4px solid white;}
+        .Main .releaseDate{font-size:0.6rem;}
+        .Main .overview{margin:4px 0;font-size:0.6rem}
+
+        .rowWise{padding:3px 5px 3px 0px !important;margin-left:10px;font-size:0.9rem;}
+        .rowBox{margin-left:10px;}
+        .rowBox .slider .sliderContent{width:101px;position:relative;padding:5px 5px 2px 0px !important;display:inline-block;}
+        
+        .hoverImage .title{margin-left:10px;margin-right:10px;font-size:0.6rem} 
+        .sliderContent .hoverImage .heartSave{width:10px;height:10px;position:absolute;top:10px;left:5px;}
+        
+                       /* left arrow in row image */
+        .MdChevronLeft{width:30px;height:30px;z-index:2;border-radius:50%;}
+        
+                        /* right arrow image */
+        .MdChevronRight{width:30px;height:30px;z-index:2;border-radius:50%;} 
+          }
+                  
+      @media only screen and ((max-height:450px) and (max-width:250px)){
+        .navheader{padding:2px 10px;}
+        .navheader .netflixHeading{font-size:01rem}
+          
+        .navheader .signButton{font-size:0.5rem;padding:2px 6px;border-radius:2px;}
+        .navheader .signup{margin-left:2px;}  
+                        
+        .navheader .Button{font-size:0.5rem;padding:2px 6px;border-radius:2px;}
+        .navheader .LogOut{margin-left:2px;margin-right:10px;}
+                        
+        .Main .contentBox{padding:1px 10px;}
+        .Main .movieTitle{font-size:0.8rem;}
+        .Main .buttonBox .button{padding:4px 10px;font-size:0.5rem}
+        .Main .buttonBox{margin:4px 0;}
+        .buttonBox .buttonPlay{border:1.2px solid white}
+        .buttonBox .buttonWatchLater{margin-left:7px;border:1.2px solid white;}
+        .Main .releaseDate{font-size:0.6rem;margin-top:8px;}
+        .Main .overview{margin:4px 0;font-size:0.6rem}
+
+        .rowWise{padding:2px 5px 2px 0px !important;margin-left:10px;font-size:0.6rem;}
+        .rowBox{margin-left:10px;}
+        .rowBox .slider .sliderContent{width:70px;padding:5px 5px 2px 0px !important;display:inline-block;}
+                
+        .hoverImage .title{margin-left:10px;margin-right:10px;font-size:0.3rem} 
+        .sliderContent .hoverImage .heartSave{width:7px;height:7px;position:absolute;top:10px;left:5px;}
+                
+                               /* left arrow in row image */
+        .MdChevronLeft{width:16px !important;height:16px !important;border-radius:50%;}
+              
+                                /* right arrow image */
+        .MdChevronRight{width:16px !important;;height:16px !important;;border-radius:50%;}             
+          }    
+                                              
+@media only screen and (max-height:370px){
+         .navheader{padding:8px 20px;}
+         .navheader .netflixHeading{font-size:1.8rem;}
+         .navheader .signButton{font-size:0.7rem;padding:5px 20px;border-radius:7px;}
+         .navheader .signup{margin-left:5px;}
+  
+         .navheader .Button{font-size:0.8rem;padding:5px 20px;border-radius:7px;}
+         .navheader .LogOut{margin-left:5px;margin-right:10px;}
+  
+         .Main .contentBox{padding:8px 20px;}
+         .Main .movieTitle{font-size:1.6rem;}
+         .Main .buttonBox .button{padding:5px 20px;font-size:0.7rem}
+         .Main .buttonBox{margin:8px 0;}
+         .buttonBox .buttonWatchLater{margin-left:8px;}
+         .Main .releaseDate{font-size:0.7rem;}
+         .Main .overview{margin:7px 0;font-size:0.7rem}
+         }
+        
+      @media only screen and ((max-height:370px) and (max-width:850px)){
+           .navheader{padding:8px 20px;}
+           .navheader .netflixHeading{font-size:1.6rem;}
+           .navheader .signButton{font-size:0.7rem;padding:5px 20px;border-radius:7px;}
+           .navheader .signup{margin-left:5px;}
+  
+           .navheader .Button{font-size:0.7rem;padding:5px 20px;border-radius:7px;}
+           .navheader .LogOut{margin-left:5px;margin-right:10px;}
+  
+           .Main .contentBox{padding:2px 20px;}
+           .Main .movieTitle{font-size:1.2rem;}
+           .Main .buttonBox .button{padding:3px 18px;font-size:0.7rem}
+           .Main .buttonBox{margin:8px 0;}
+           .buttonBox .buttonWatchLater{margin-left:8px;}
+           .Main .releaseDate{font-size:0.7rem;}
+           .Main .overview{margin:7px 0;font-size:0.7rem}
+
+           .rowWise{padding:5px 5px 2px 0px !important;margin-left:20px;font-size:1.1rem;}   
+           .rowBox{margin-left:20px;}   
+            }
+     
+
+    
+      @media only screen and ((max-height:370px) and (max-width:500px)){
+           .navheader{padding:4px 20px;}
+           .navheader .netflixHeading{font-size:1.3rem;}
+           .navheader .signButton{font-size:0.5rem;padding:3px 12px;border-radius:4px;margin-bottom:10px;}
+           .navheader .signup{margin-left:5px;}
+  
+           .navheader .Button{font-size:0.5rem;padding:3px 12px;border-radius:4px;margin-bottom:10px;}
+           .navheader .LogOut{margin-left:5px;margin-right:10px;}
+  
+           .Main .contentBox{padding:2px 20px;}
+           .Main .movieTitle{font-size:0.9rem;}
+           .Main .buttonBox .button{padding:4px 16px;font-size:0.7rem}
+           .Main .buttonBox{margin:6px 0;}
+           .buttonBox .buttonWatchLater{margin-left:8px;}
+           .Main .releaseDate{font-size:0.7rem;}
+           .Main .overview{margin:6px 0;font-size:0.7rem}
+
+           .rowWise{padding:5px 5px 2px 0px !important;margin-left:20px;font-size:0.8rem;}
+           .rowBox{margin-left:20px;}
+           .rowBox .slider .sliderContent{width:130px;padding:2px 10px 2px 0px !important;display:inline-block;}
+                
+           .hoverImage .title{margin-left:10px;margin-right:10px;font-size:0.8rem} 
+           .sliderContent .hoverImage .heartSave{width:10px;height:10px;position:absolute;top:10px;left:8px;}
+                
+                               /* left arrow in row image */
+           .MdChevronLeft{width:23px !important;height:23px !important;border-radius:50%;}
+              
+                                /* right arrow image */
+           .MdChevronRight{width:23px !important;;height:23px !important;border-radius:50%;}  
+              }
+
+      @media only screen and ((max-height:370px) and (max-width:290px)){
+           .navheader{padding:2px 14px;}
+           .navheader .netflixHeading{font-size:1.3rem;}
+           .navheader .signButton{font-size:0.5rem;padding:3px 8px;border-radius:3px;}
+           .navheader .signup{margin-left:1px;}
+  
+           .navheader .Button{font-size:0.5rem;padding:3px 8px;border-radius:3px;}
+           .navheader .LogOut{margin-left:1px;margin-right:10px;}
+  
+           .Main .contentBox{padding:2px 14px;}
+           .Main .movieTitle{font-size:0.8rem;}
+           .Main .buttonBox .button{padding:3px 10px;font-size:0.6rem}
+           .Main .buttonBox{margin:3px 0;}
+           .buttonBox .buttonWatchLater{margin-left:4px;}
+           .Main .releaseDate{font-size:0.6rem;}
+           .Main .overview{margin:4px 0;font-size:0.6rem}
+
+           .rowWise{padding:2px 5px 2px 0px !important;margin-left:14px;font-size:0.7rem;}
+           .rowBox{margin-left:14px;}
+           .rowBox .slider .sliderContent{width:80px;padding:2px 10px 2px 0px !important;display:inline-block;}
+                
+           .hoverImage .title{margin-left:10px;margin-right:10px;font-size:0.5rem} 
+           .sliderContent .hoverImage .heartSave{width:6px;height:6px;position:absolute;top:8px;left:6px;}
+                
+                               /* left arrow in row image */
+           .MdChevronLeft{width:23px !important;height:23px !important;border-radius:50%;}
+              
+                                /* right arrow image */
+           .MdChevronRight{width:23px !important;;height:23px !important;border-radius:50%;}  
+            }
+      @media only screen and ((max-height:370px) and (max-width:210px)){
+           .Main{height:60vh;}
+           .navheader{padding:2px 10px;}
+           .navheader .netflixHeading{font-size:1rem;}
+           .navheader .signButton{font-size:0.4rem;padding:2px 4px;border-radius:3px;margin-bottom:10px;}
+           .navheader .signup{margin-left:1px;}
+  
+           .navheader .Button{font-size:0.4rem;padding:2px 4px;border-radius:3px;margin-bottom:10px;}
+           .navheader .LogOut{margin-left:2px;margin-right:10px;}
+  
+           .Main .contentBox{padding:2px 10px;margin-top:-14px;}
+           .Main .movieTitle{font-size:0.6rem;}
+           .Main .buttonBox .button{padding:1px 5px;font-size:0.5rem}
+           .Main .buttonBox{margin:1px 0;}
+           .buttonBox .buttonWatchLater{margin-left:4px;}
+           .Main .releaseDate{font-size:0.6rem;}
+           .Main .overview{margin:1px 0;font-size:0.5rem}
+
+           .rowWise{padding:2px 5px 1px 0px !important;margin-left:10px;font-size:0.6rem;}
+           .rowBox{margin-left:10px;}
+           .rowBox .slider .sliderContent{width:60px;padding:2px 10px 2px 0px !important;display:inline-block;}
+                
+           .hoverImage .title{margin-left:10px;margin-right:10px;font-size:0.4rem} 
+           .sliderContent .hoverImage .heartSave{width:4px;height:4px;position:absolute;top:5px;left:3px;}
+                
+                               /* left arrow in row image */
+           .MdChevronLeft{width:15px !important;height:15px !important;border-radius:50%;}
+              
+                                /* right arrow image */
+           .MdChevronRight{width:15px !important;;height:15px !important;border-radius:50%;}  
+              }
+  
+                                              
+      @media only screen and (max-height:270px){
+           .navheader{padding:4px 20px;}
+           .navheader .netflixHeading{font-size:1.5rem;}
+           .navheader .signButton{font-size:0.7rem;padding:5px 18px;border-radius:6px;}
+           .navheader .signup{margin-left:5px;}
+ 
+           .navheader .Button{font-size:0.7rem;padding:5px 18px;border-radius:6px;}
+           .navheader .LogOut{margin-left:5px;margin-right:10px;}
+ 
+           .Main .contentBox{padding:4px 20px;margin-top:-10px;}
+           .Main .movieTitle{font-size:1.3rem;}
+           .Main .buttonBox .button{padding:4px 17px;font-size:0.6rem}
+           .Main .buttonBox{margin:2px 0;}
+           .buttonBox .buttonWatchLater{margin-left:8px;}
+           .Main .releaseDate{font-size:0.7rem;}
+           .Main .overview{margin:2px 0;font-size:0.7rem}   
+      } 
+      @media only screen and ((max-height:270px) and (max-width:500px)){
+           .navheader{padding:4px 16px;}
+           .navheader .netflixHeading{font-size:1.2rem;}
+           .navheader .signButton{font-size:0.5rem;padding:3px 14px;border-radius:4px;margin-bottom:10px;}
+           .navheader .signup{margin-left:5px;}
+ 
+           .navheader .Button{font-size:0.5rem;margin-bottom:10px;padding:3px 14px;border-radius:4px;}
+           .navheader .LogOut{margin-left:5px;margin-right:10px;}
+ 
+           .Main .contentBox{padding:4px 16px;margin-top:-10px;}
+           .Main .movieTitle{font-size:1rem;}
+           .Main .buttonBox .button{padding:2px 14px;font-size:0.5rem}
+           .Main .buttonBox{margin:2px 0;}
+           .buttonBox .buttonWatchLater{margin-left:6px;}
+           .Main .releaseDate{font-size:0.6rem;}
+           .Main .overview{margin:1px 0;font-size:0.6rem}
+
+           .rowWise{padding:2px 5px 1px 0px !important;margin-left:16px;font-size:0.6rem;}
+           .rowBox{margin-left:16px;}
+           .rowBox .slider .sliderContent{width:60px;padding:2px 10px 2px 0px !important;display:inline-block;}
+                
+           .hoverImage .title{margin-left:10px;margin-right:10px;font-size:0.4rem} 
+           .sliderContent .hoverImage .heartSave{width:4px;height:4px;position:absolute;top:5px;left:3px;}
+                
+                               /* left arrow in row image */
+           .MdChevronLeft{width:15px !important;height:15px !important;border-radius:50%;}
+              
+                                /* right arrow image */
+           .MdChevronRight{width:15px !important;;height:15px !important;border-radius:50%;}              
+            } 
+      @media only screen and ((max-height:270px) and (max-width:290px)){
+            .navheader{padding:4px 16px;}
+            .navheader .netflixHeading{font-size:1rem;}
+            .navheader .signButton{font-size:0.4rem;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+            .navheader .signup{margin-left:2px;}
+ 
+            .navheader .Button{font-size:0.4rem;margin-bottom:10px;padding:3px 10px;border-radius:4px;}
+            .navheader .LogOut{margin-left:2px;margin-right:10px;}
+ 
+            .Main .contentBox{padding:4px 16px;margin-top:-10px;}
+            .Main .movieTitle{font-size:0.8rem;}
+            .Main .buttonBox{margin:1px 0;}
+            .buttonBox .buttonWatchLater{margin-left:4px;}
+            .Main .releaseDate{font-size:0.6rem;margin-top:5px;}
+            .Main .overview{margin:1px 0;font-size:0.6rem}
+               }                                                                  
+
+
+/* Signup */
+.SignupComponent{display:flex;justify-content:center;align-items:center;}
+.SignupComponent .blackScreen{width:100%;height:100%;background:rgba(0, 0, 0,0.3);z-index:1;position:absolute;top:0;left:0;}
+.SignupComponent img{width:100%;height:100vh !important;object-fit:cover;}
+
+.SignupComponent .signupContentbox{padding:20px;position:absolute;color:white;width:60vw;z-index:3;background-color:rgba(0,0,0,0.7);display:flex;justify-content: center;align-items: center;;}
+.SignupComponent .signupContent{width:90%;height:100%;display:flex;flex-direction:column;gap:20px;}
+
+.SignupComponent .signupContent .errorSignin{background-color:rgb(171, 16, 16);margin:8px;padding:6px}
+.SignupComponent .form{display:flex;gap:14px;flex-direction:column;}
+.SignupComponent .form .input{padding:10px 15px;;background-color:rgb(240, 240, 240);border-radius:10px;border:none;}
+.SignupComponent .form .input:focus{background:rgb(208, 208, 208);outline:none;}
+.SignupComponent .signupbutton{font-weight:bold;border:none;background-color:red;border:none;padding:10px 15px;border-radius:11px; color:white;}
+
+.SignupComponent .form .formalities{display:flex;justify-content:space-between;}
+.SignupComponent .form .lastLine{font-size:bold;font-weight:bold;}
+.SignupComponent .form .lastLine span{color:rgb(164, 164, 164);font-weight:normal;}
+.SignupComponent .form .lastLine .link{color:white;text-decoration:none;}
+
+     @media only screen and (max-height:450px){
+
+                .SignupComponent .signupContentbox{padding:25px;width:60vw;margin-top:40px;}
+                .SignupComponent .signupContent{gap:10px;}
+                .SignupComponent .signupContent .SignupHeading{ font-size: 1.8rem;;;}
+                .SignupComponent .signupContent .errorSignin{margin:8px;padding:6px}
+                .SignupComponent .form{gap:10px;}
+                .SignupComponent .form .input{padding:10px 15px;;border-radius:12px;}
+                .SignupComponent .signupbutton{padding:10px 15px;border-radius:12px;}
+                 }
+  
+              @media only screen and ((max-height:450px) and (max-width:590px)){
+
+                 .SignupComponent .signupContentbox{padding:20px;width:70vw;}
+                 .SignupComponent .signupContent{gap:10px;}
+                 .SignupComponent .signupContent .SignupHeading{ font-size: 1.5rem;;;}
+  
+                 .SignupComponent .signupContent .errorSignin{margin:8px;padding:6px}
+                 .SignupComponent .form{gap:10px;}
+                 .SignupComponent .form .input{padding:8px 15px;;border-radius:10px;}
+                 .SignupComponent .signupbutton{padding:8px 15px;border-radius:10px;}
+                  }
+
+              @media only screen and ((max-height:450px) and (max-width:490px)){
+
+                  .SignupComponent .signupContentbox{padding:20px;width:70vw;}
+                 .SignupComponent .signupContent{gap:10px;}
+                 .SignupComponent .signupContent .SignupHeading{ font-size: 1.5rem;;}
+    
+                 .SignupComponent .signupContent .errorSignin{margin:8px;padding:6px}
+                 .SignupComponent .form{gap:10px;}
+                 .SignupComponent .form .input{padding:8px 15px;;border-radius:10px;}
+                 .SignupComponent .signupbutton{padding:8px 15px;border-radius:10px;}
+    
+                 .SignupComponent .form .formalities{font-size:0.8rem;}
+                 .SignupComponent .form .lastLine{font-size:0.8rem;}
+                     }
+
+              @media only screen and ((max-height:450px) and (max-width:400px)){
+
+                  .SignupComponent .signupContentbox{padding:20px;width:70vw;}
+                  .SignupComponent .signupContent{gap:8px;}
+                  .SignupComponent .signupContent .SignupHeading{ font-size: 1.2rem;;}
+      
+                  .SignupComponent .signupContent .errorSignin{margin:8px;padding:6px}
+                  .SignupComponent .form{gap:8px;}
+                  .SignupComponent .form .input{padding:4px 15px;;border-radius:10px;font-size:0.7rem;}
+                  .SignupComponent .signupbutton{padding:4px 15px;border-radius:10px;font-size:0.7rem;}
+      
+                  .SignupComponent .form .formalities{font-size:0.6rem;}
+                  .SignupComponent .form .lastLine{font-size:0.6rem;}
+                  }
+                  @media only screen and ((max-height:450px) and (max-width:330px)){
+
+                    .SignupComponent .signupContentbox{padding:10px;width:80vw;}
+                    .SignupComponent .signupContent{gap:8px;}
+                    .SignupComponent .signupContent .SignupHeading{ font-size: 1.2rem;;}
+        
+                    .SignupComponent .signupContent .errorSignin{margin:8px;padding:6px}
+                    .SignupComponent .form{gap:8px;}
+                    .SignupComponent .form .input{padding:4px 15px;;border-radius:10px;font-size:0.7rem;}
+                    .SignupComponent .signupbutton{padding:4px 15px;border-radius:10px;font-size:0.7rem;}
+        
+                    .SignupComponent .form .formalities{font-size:0.6rem;}
+                    .SignupComponent .form .lastLine{font-size:0.6rem;}
+                    }
+          
+              @media only screen and ((max-height:450px) and (max-width:250px)){
+
+                   .SignupComponent .signupContentbox{padding:15px 10px 15px 10px;width:70vw;}
+                   .SignupComponent .signupContent{gap:10px;}
+                   .SignupComponent .signupContent .SignupHeading{ font-size: 0.8rem;;;}
+        
+                   .SignupComponent .signupContent .errorSignin{margin:4px;padding:3px}
+                   .SignupComponent .form{gap:10px;}
+                   .SignupComponent .form .input{padding:4px 15px;;border-radius:10px;font-size:0.6rem;}
+                  .SignupComponent .signupbutton{padding:4px 15px;border-radius:10px;font-size:0.6rem;}
+        
+                  .SignupComponent .form .formalities{font-size:0.5rem;}
+                  .SignupComponent .form .formalities .checkbox{width:8px;height:8px;}
+                  .SignupComponent .form .lastLine{font-size:0.4rem;}
+                  }
+                  @media only screen and ((max-height:450px) and (max-width:210px)){
+
+                    .SignupComponent .signupContentbox{padding:15px 10px 15px 10px;width:70vw;}
+                    .SignupComponent .signupContent{gap:10px;}
+                    .SignupComponent .signupContent .SignupHeading{ font-size: 0.8rem;;;}
+         
+                    .SignupComponent .signupContent .errorSignin{margin:4px;padding:3px}
+                    .SignupComponent .form{gap:10px;}
+                    .SignupComponent .form .input{padding:4px 15px;;border-radius:10px;font-size:0.6rem;}
+                   .SignupComponent .signupbutton{padding:4px 15px;border-radius:10px;font-size:0.6rem;}
+             
+                   .SignupComponent .form .formalities{text-align:center;gap:3px;flex-direction:column;font-size:0.5rem;justify-content:center;}
+                   .SignupComponent .form .formalities .checkbox{width:8px;height:8px;}
+                   .SignupComponent .form .lastLine{font-size:0.4rem;text-align:center;}
+                   }
+
+              @media only screen and (max-height:350px){
+  
+                   .SignupComponent .signupContentbox{padding:20px 10px 20px 10px;width:60vw;margin-top:40px;}
+                   .SignupComponent .signupContent{gap:6px}
+                   .SignupComponent .signupContent .SignupHeading{ font-size: 1.4rem;;}
+
+                   .SignupComponent .signupContent .errorSignin{margin:4px;padding:3px}
+                   .SignupComponent .form{gap:6px}
+                   .SignupComponent .form .input{padding:6px 15px;;border-radius:12px;}
+
+                   .SignupComponent .signupbutton{padding:8px 15px;border-radius:12px;}
+
+                   .SignupComponent .form .formalities{font-size:1rem}
+                   .SignupComponent .form .lastLine{font-size:1rem;}
+                       }
+
+ @media only screen and ((max-height:350px) and (max-width:570px)){
+ 
+  .SignupComponent .signupContentbox{padding:20px 8px 20px 8px;width:60vw;margin-top:40px;}
+  .SignupComponent .signupContent{gap:8px;}
+  .SignupComponent .signupContent .SignupHeading{ font-size: 1.2rem;;}
+
+  .SignupComponent .signupContent .errorSignin{margin:4px;padding:3px}
+  .SignupComponent .form{gap:8px;}
+  .SignupComponent .form .input{padding:3px 15px;;border-radius:12px;font-size:0.8rem;}
+
+  .SignupComponent .signupbutton{padding:4px 15px;border-radius:12px;}
+
+  .SignupComponent .form .formalities{font-size:0.8rem;}
+  .SignupComponent .form .lastLine{font-size:0.8rem;}
+  .SignupComponent .form .lastLine .link{font-size:0.8rem;}
+    }
+  @media only screen and ((max-height:350px) and (max-width:450px)){
+ 
+    .SignupComponent .signupContentbox{padding:20px 8px 20px 8px;width:60vw;margin-top:40px;}
+    .SignupComponent .signupContent{gap:8px;}
+    .SignupComponent .signupContent .SignupHeading{ font-size: 1.02rem;}
+    
+    .SignupComponent .signupContent .errorSignin{margin:4px;padding:3px}
+    .SignupComponent .form{gap:8px;}
+    .SignupComponent .form .input{padding:5px 15px;;border-radius:12px;font-size:0.6rem;}
+
+    .SignupComponent .signupbutton{font-size:0.7rem;padding:5px 15px;border-radius:12px;}
+  
+    .SignupComponent .form .formalities{font-size:0.6rem;}
+    .SignupComponent .form .lastLine{font-size:0.6rem;}
+    .SignupComponent .form .lastLine .link{font-size:0.6rem;}
+      }
+    @media only screen and ((max-height:350px) and (max-width:340px)){
+
+      .SignupComponent .signupContentbox{padding:15px 10px 15px 10px;width:60vw;}
+      .SignupComponent .signupContent{gap:8px;}
+      .SignupComponent .signupContent .SignupHeading{ font-size: 0.8rem;;}
+    
+      .SignupComponent .signupContent .errorSignin{margin:4px;padding:3px}
+      .SignupComponent .form{gap:8px;}
+      .SignupComponent .form .input{padding:4px 15px;;border-radius:10px;font-size:0.5rem;}
+
+      .SignupComponent .signupbutton{font-size:0.4rem;padding:4px 15px;border-radius:12px;}
+    
+      .SignupComponent .form .formalities{font-size:0.4rem;}
+      .SignupComponent .form .lastLine{font-size:0.4rem;}
+      .SignupComponent .form .lastLine .link{font-size:0.4rem;} 
+        }
+
+@media only screen and (max-height:290px){
+   .SignupComponent .signupContentbox{padding:5px 10px 10px 10px;width:60vw;margin-top:40px;}
+   .SignupComponent .signupContent{gap:5px;}
+   .SignupComponent .signupContent .SignupHeading{ font-size: 1rem;}
+
+   .SignupComponent .signupContent .errorSignin{margin:2px;padding:3px}
+   .SignupComponent .form{gap:5px;}
+   .SignupComponent .form .input{padding:2px 15px;;border-radius:12px;font-size:0.6rem;}
+
+   .SignupComponent .signupbutton{padding:3px 15px;border-radius:12px;font-size:0.6rem;}
+
+    .SignupComponent .form .formalities{font-size:0.8rem;}
+    .SignupComponent .form .lastLine{font-size:0.7rem;}
+
+      .SignupComponent .form .lastLine .link{font-size:0.7rem;}
+      }
+@media only screen and ((max-height:290px) and (max-width:450px)){
+  .SignupComponent .signupContentbox{padding:10px 10px 10px 10px;width:70vw;margin-top:40px;}
+  .SignupComponent .signupContent{gap:4px;}
+  .SignupComponent .signupContent .SignupHeading{ font-size: 0.8rem;;}
+
+  .SignupComponent .signupContent .errorSignin{margin:2px;padding:3px}
+  .SignupComponent .form{gap:5px;}
+  .SignupComponent .form .input{padding:3px 15px;;border-radius:12px;font-size:0.5rem;}
+  .SignupComponent .signupbutton{padding:4px 15px;border-radius:12px;font-size:0.5rem;}
+
+  .SignupComponent .form .formalities{font-size:0.6rem;}
+  .SignupComponent .form .lastLine{font-size:0.6rem;}
+  .SignupComponent .form .lastLine .link{font-size:0.6rem;}
+   }
+   @media only screen and ((max-height:290px) and (max-width:340px)){
+    .SignupComponent .signupContentbox{padding:10px 10px 10px 10px;width:70vw;margin-top:40px;}
+    .SignupComponent .signupContent{gap:4px;}
+    .SignupComponent .signupContent .SignupHeading{ font-size: 0.8rem;;}
+  
+    .SignupComponent .signupContent .errorSignin{margin:2px;padding:3px}
+    .SignupComponent .form{gap:5px;}
+    .SignupComponent .form .input{padding:3px 15px;;border-radius:12px;font-size:0.5rem;}
+    .SignupComponent .signupbutton{padding:4px 15px;border-radius:12px;font-size:0.5rem;}
+  
+    .SignupComponent .form .formalities{font-size:0.6rem;}
+    .SignupComponent .form .lastLine{font-size:0.5rem;}
+    .SignupComponent .form .lastLine .link{font-size:0.6rem;}
+     }
+     @media only screen and ((max-height:290px) and (max-width:260px)){
+      .SignupComponent .signupContentbox{padding:5px 10px 5px 10px;width:70vw;margin-top:40px;}
+      .SignupComponent .signupContent{gap:4px;}
+      .SignupComponent .signupContent .SignupHeading{ font-size: 0.7rem;;}
+    
+      .SignupComponent .signupContent .errorSignin{margin:2px;padding:3px}
+      .SignupComponent .form{gap:4px;}
+      .SignupComponent .form .input{padding:2px 15px;;border-radius:12px;font-size:0.4rem;}
+      .SignupComponent .signupbutton{padding:2px 15px;border-radius:12px;font-size:0.4rem;}
+    
+      .SignupComponent .form .formalities{font-size:0.5rem;}
+      .SignupComponent .form .formalities .checkbox{margin-bottom:-20px;width:8px;height:8px;}
+
+      .SignupComponent .form .lastLine{font-size:0.5rem;margin-top:-5px;}
+      .SignupComponent .form .lastLine .link{font-size:0.5rem;}
+       }
+    
+
+
+
+/* Signin */
+.SigninComponent{display:flex;justify-content:center;align-items:center;}
+.SigninComponent .blackScreen{width:100%;height:100%;background:rgba(0, 0, 0,0.3);z-index:1;position:absolute;top:0;left:0;}
+.SigninComponent img{width:100%;height:100vh !important;object-fit:cover;}
+
+.SigninComponent .signinContentbox{padding:30px;position:absolute;color:white;width:60vw;z-index:3;background-color:rgba(0,0,0,0.7);display:flex;justify-content: center;align-items: center;;}
+.SigninComponent .signinContent{width:90%;height:100%;display:flex;flex-direction:column;gap:20px;}
+
+.SigninComponent .signinbutton{font-weight:bold;border:none;background-color:red;border:none;padding:10px 15px;border-radius:11px; color:white;}
+.SigninComponent .signinContent .errorSignin{background-color:rgb(171, 16, 16);margin:8px;padding:8px}
+.SigninComponent .form{display:flex;gap:14px;flex-direction:column;}
+
+.SigninComponent .form .input{padding:10px 15px;;background-color:rgb(240, 240, 240);border-radius:10px;border:none;}
+.SigninComponent .form .input:focus{background:rgb(208, 208, 208);outline:none;}
+.SigninComponent .form .formalities{display:flex;justify-content:space-between;}
+.SigninComponent .form .lastLine{font-size:bold;font-weight:bold;}
+.SigninComponent .form .lastLine span{color:rgb(164, 164, 164);font-weight:normal;}
+.SigninComponent .form .lastLine .link{color:white;text-decoration:none;}
+
+
+@media only screen and (max-height:450px){
+
+  .SigninComponent .signinContentbox{padding:25px;width:60vw;margin-top:40px;}
+  .SigninComponent .signinContent{gap:10px;}
+  .SigninComponent .signinContent .SigninHeading{ font-size: 1.8rem;;;}
+  .SigninComponent .signinContent .errorSignin{margin:8px;padding:6px}
+  .SigninComponent .form{gap:10px;}
+  .SigninComponent .form .input{padding:10px 15px;;border-radius:12px;}
+  .SigninComponent .signinbutton{padding:10px 15px;border-radius:12px;}
+   }
+
+@media only screen and ((max-height:450px) and (max-width:590px)){
+
+   .SigninComponent .signinContentbox{padding:20px;width:70vw;}
+   .SigninComponent .signinContent{gap:10px;}
+   .SigninComponent .signinContent .SigninHeading{ font-size: 1.5rem;;;}
+
+   .SigninComponent .signinContent .errorSignin{margin:8px;padding:6px}
+   .SigninComponent .form{gap:10px;}
+   .SigninComponent .form .input{padding:8px 15px;;border-radius:10px;}
+   .SigninComponent .signinbutton{padding:8px 15px;border-radius:10px;}
+    }
+
+@media only screen and ((max-height:450px) and (max-width:490px)){
+
+    .SigninComponent .signinContentbox{padding:20px;width:70vw;}
+   .SigninComponent .signinContent{gap:10px;}
+   .SigninComponent .signinContent .SigninHeading{ font-size: 1.5rem;;}
+
+   .SigninComponent .signinContent .errorSignin{margin:8px;padding:6px}
+   .SigninComponent .form{gap:10px;}
+   .SigninComponent .form .input{padding:8px 15px;;border-radius:10px;}
+   .SigninComponent .signinbutton{padding:8px 15px;border-radius:10px;}
+
+   .SigninComponent .form .formalities{font-size:0.8rem;}
+   .SigninComponent .form .lastLine{font-size:0.8rem;}
+       }
+
+@media only screen and ((max-height:450px) and (max-width:400px)){
+
+    .SigninComponent .signinContentbox{padding:20px;width:70vw;}
+    .SigninComponent .signinContent{gap:8px;}
+    .SigninComponent .signinContent .SigninHeading{ font-size: 1.2rem;;}
+
+    .SigninComponent .signinContent .errorSignin{margin:8px;padding:6px}
+    .SigninComponent .form{gap:8px;}
+    .SigninComponent .form .input{padding:4px 15px;;border-radius:10px;font-size:0.7rem;}
+    .SigninComponent .signinbutton{padding:4px 15px;border-radius:10px;font-size:0.7rem;}
+
+    .SigninComponent .form .formalities{font-size:0.6rem;}
+    .SigninComponent .form .lastLine{font-size:0.6rem;}
+    }
+    @media only screen and ((max-height:450px) and (max-width:330px)){
+
+      .SigninComponent .signinContentbox{padding:10px;width:80vw;}
+      .SigninComponent .signinContent{gap:8px;}
+      .SigninComponent .signinContent .SigninHeading{ font-size: 1.2rem;;}
+
+      .SignupComponent .signinContent .errorSignin{margin:8px;padding:6px}
+      .SigninComponent .form{gap:8px;}
+      .SigninComponent .form .input{padding:4px 15px;;border-radius:10px;font-size:0.7rem;}
+      .SigninComponent .signinbutton{padding:4px 15px;border-radius:10px;font-size:0.7rem;}
+
+      .SigninComponent .form .formalities{font-size:0.6rem;}
+      .SigninComponent .form .lastLine{font-size:0.6rem;}
+      }
+
+@media only screen and ((max-height:450px) and (max-width:250px)){
+
+     .SigninComponent .signinContentbox{padding:15px 10px 15px 10px;width:70vw;}
+     .SigninComponent .signinContent{gap:10px;}
+     .SigninComponent .signinContent .SigninHeading{ font-size: 0.8rem;;;}
+
+     .SigninComponent .signinContent .errorSignin{margin:4px;padding:3px}
+     .SigninComponent .form{gap:10px;}
+     .SigninComponent .form .input{padding:4px 15px;;border-radius:10px;font-size:0.6rem;}
+    .SigninComponent .signinbutton{padding:4px 15px;border-radius:10px;font-size:0.6rem;}
+
+    .SigninComponent .form .formalities{font-size:0.5rem;}
+    .SigninComponent .form .formalities .checkbox{width:8px;height:8px;}
+    .SigninComponent .form .lastLine{font-size:0.4rem;}
+    }
+    @media only screen and ((max-height:450px) and (max-width:210px)){
+
+      .SigninComponent .signinContentbox{padding:15px 10px 15px 10px;width:70vw;}
+      .SigninComponent .signinContent{gap:10px;}
+      .SigninComponent .signinContent .SigninHeading{ font-size: 0.8rem;;;}
+
+      .SigninComponent .signinContent .errorSignin{margin:4px;padding:3px}
+      .SigninComponent .form{gap:10px;}
+      .SigninComponent .form .input{padding:4px 15px;;border-radius:10px;font-size:0.6rem;}
+     .SigninComponent .signinbutton{padding:4px 15px;border-radius:10px;font-size:0.6rem;}
+
+     .SigninComponent .form .formalities{text-align:center;gap:3px;flex-direction:column;font-size:0.5rem;justify-content:center;}
+     .SigninComponent .form .formalities .checkbox{width:8px;height:8px;}
+     .SigninComponent .form .lastLine{font-size:0.4rem;text-align:center;}
+     }
+
+@media only screen and (max-height:350px){
+
+     .SigninComponent .signinContentbox{padding:20px 10px 20px 10px;width:60vw;margin-top:40px;}
+     .SigninComponent .signinContent{gap:6px}
+     .SigninComponent .signinContent .SigninHeading{ font-size: 1.4rem;;}
+
+     .SigninComponent .signinContent .errorSignin{margin:4px;padding:3px}
+     .SignupComponent .form{gap:6px}
+     .SigninComponent .form .input{padding:6px 15px;;border-radius:12px;}
+
+     .SigninComponent .signinbutton{padding:8px 15px;border-radius:12px;}
+
+     .SigninComponent .form .formalities{font-size:1rem}
+     .SigninComponent .form .lastLine{font-size:1rem;}
+         }
+
+@media only screen and ((max-height:350px) and (max-width:570px)){
+
+.SigninComponent .signinContentbox{padding:20px 8px 20px 8px;width:60vw;margin-top:40px;}
+.SigninComponent .signinContent{gap:8px;}
+.SigninComponent .signinContent .SigninHeading{ font-size: 1.2rem;;}
+
+.SigninComponent .signinContent .errorSignin{margin:4px;padding:3px}
+.SigninComponent .form{gap:8px;}
+.SigninComponent .form .input{padding:3px 15px;;border-radius:12px;font-size:0.8rem;}
+
+.SigninComponent .signinbutton{padding:4px 15px;border-radius:12px;}
+
+.SigninComponent .form .formalities{font-size:0.8rem;}
+.SigninComponent .form .lastLine{font-size:0.8rem;}
+.SigninComponent .form .lastLine .link{font-size:0.8rem;}
+}
+@media only screen and ((max-height:350px) and (max-width:450px)){
+
+.SigninComponent .signinContentbox{padding:20px 8px 20px 8px;width:60vw;margin-top:40px;}
+.SigninComponent .signinContent{gap:8px;}
+.SigninComponent .signinContent .SigninHeading{ font-size: 1.02rem;}
+
+.SigninComponent .signinContent .errorSignin{margin:4px;padding:3px}
+.SigninComponent .form{gap:8px;}
+.SigninComponent .form .input{padding:5px 15px;;border-radius:12px;font-size:0.6rem;}
+
+.SigninComponent .signinbutton{font-size:0.7rem;padding:5px 15px;border-radius:12px;}
+
+.SigninComponent .form .formalities{font-size:0.6rem;}
+.SigninComponent .form .lastLine{font-size:0.6rem;}
+.SigninComponent .form .lastLine .link{font-size:0.6rem;}
+}
+@media only screen and ((max-height:350px) and (max-width:340px)){
+
+.SigninComponent .signinContentbox{padding:15px 10px 15px 10px;width:60vw;}
+.SigninComponent .signinContent{gap:8px;}
+.SigninComponent .signinContent .SigninHeading{ font-size: 0.8rem;;}
+
+.SigninComponent .signinContent .errorSignin{margin:4px;padding:3px}
+.SigninComponent .form{gap:8px;}
+.SigninComponent .form .input{padding:4px 15px;;border-radius:10px;font-size:0.5rem;}
+
+.SigninComponent .signinbutton{font-size:0.4rem;padding:4px 15px;border-radius:12px;}
+
+.SigninComponent .form .formalities{font-size:0.4rem;}
+.SigninComponent .form .lastLine{font-size:0.4rem;}
+.SigninComponent .form .lastLine .link{font-size:0.4rem;} 
+}
+
+@media only screen and (max-height:290px){
+.SigninComponent .signinContentbox{padding:5px 10px 10px 10px;width:60vw;margin-top:40px;}
+.SigninComponent .signinContent{gap:5px;}
+.SigninComponent .signinContent .SigninHeading{ font-size: 1rem;}
+
+.SigninComponent .signinContent .errorSignin{margin:2px;padding:3px}
+.SigninComponent .form{gap:5px;}
+.SigninComponent .form .input{padding:2px 15px;;border-radius:12px;font-size:0.6rem;}
+
+.SigninComponent .signinbutton{padding:3px 15px;border-radius:12px;font-size:0.6rem;}
+
+.SigninComponent .form .formalities{font-size:0.8rem;}
+.SigninComponent .form .lastLine{font-size:0.7rem;}
+
+.SigninComponent .form .lastLine .link{font-size:0.7rem;}
+}
+@media only screen and ((max-height:290px) and (max-width:450px)){
+.SigninComponent .signinContentbox{padding:10px 10px 10px 10px;width:70vw;margin-top:40px;}
+.SigninComponent .signinContent{gap:4px;}
+.SigninComponent .signinContent .SigninHeading{ font-size: 0.8rem;;}
+
+.SigninComponent .signinContent .errorSignin{margin:2px;padding:3px}
+.SigninComponent .form{gap:5px;}
+.SigninComponent .form .input{padding:3px 15px;;border-radius:12px;font-size:0.5rem;}
+.SigninComponent .signinbutton{padding:4px 15px;border-radius:12px;font-size:0.5rem;}
+
+.SigninComponent .form .formalities{font-size:0.6rem;}
+.SigninComponent .form .lastLine{font-size:0.6rem;}
+.SigninComponent .form .lastLine .link{font-size:0.6rem;}
+}
+@media only screen and ((max-height:290px) and (max-width:340px)){
+  .SigninComponent .signinContentbox{padding:10px 10px 10px 10px;width:70vw;margin-top:40px;}
+  .SigninComponent .signinContent{gap:4px;}
+  .SigninComponent .signinContent .SigninHeading{ font-size: 0.8rem;;}
+
+  .SigninComponent .signinContent .errorSignin{margin:2px;padding:3px}
+  .SigninComponent .form{gap:5px;}
+  .SigninComponent .form .input{padding:3px 15px;;border-radius:12px;font-size:0.5rem;}
+  .SigninComponent .signinbutton{padding:4px 15px;border-radius:12px;font-size:0.5rem;}
+
+  .SigninComponent .form .formalities{font-size:0.6rem;}
+  .SigninComponent .form .lastLine{font-size:0.5rem;}
+  .SigninComponent .form .lastLine .link{font-size:0.6rem;}
+   }
+   @media only screen and ((max-height:290px) and (max-width:260px)){
+    .SigninComponent .signinContentbox{padding:5px 10px 5px 10px;width:70vw;margin-top:40px;}
+    .SigninComponent .signinContent{gap:3px;}
+    .SigninComponent .signinContent .SigninHeading{ font-size: 0.6rem;;}
+  
+    .SigninComponent .signinContent .errorSignin{margin:2px;padding:3px}
+    .SigninComponent .form{gap:4px;}
+    .SigninComponent .form .input{padding:2px 15px;;border-radius:12px;font-size:0.4rem;}
+    .SigninComponent .signinbutton{padding:2px 15px;border-radius:12px;font-size:0.4rem;}
+  
+    .SigninComponent .form .formalities{font-size:0.5rem;}
+    .SigninComponent .form .formalities .checkbox{margin-bottom:-20px;width:8px;height:8px;}
+    .SigninComponent .form .lastLine{font-size:0.5rem;margin-top:-5px;}
+    .SigninComponent .form .lastLine .link{font-size:0.5rem;}
+     }
+  
+
+
+
+      /* account */
+.savedFile{height:70vh !important;color:white;position:relative}
+.savedFile img{width:100%;height:100% !important;object-fit:cover;}
+.savedFile .blackScreen{width:100%;height:100%;background-color:rgba(0, 0, 0, 0.317);position:absolute;top:0;left:0;}
+.savedFile .blackScreen .content{font-size:1.2rem;position:absolute;top:0;left:0;display:flex;align-items:center;width:100%;height:100%;padding:10px 20px;}
+
+/* Saved file */
+ .SaverowWise{color:white;font-size:1.6rem;font-weight:bold;padding:20px;}
+.SavedPageRowBox{position:relative;display:flex;align-items:center;margin-left:20px;margin-bottom:10px;}
+
+                 /* // to hide scroll bar */
+.SavedPageRowBox .slider{  height:100%;
+                  white-space: nowrap;   
+                  overflow-x:scroll;scroll-behavior:smooth;
+                  -ms-overflow-style: none;  
+                }
+ .SavedPageRowBox  .slider .sliderContent{white-space:break-spaces ;cursor:pointer;position:relative;width:200px;padding:5px 10px 10px 0px;display:inline-block;}
+ .SavedPageRowBox  .slider .sliderContent img{width:100%;height:auto;display:block;}
+
+                 /* to hide scroll bar in row */
+ .SavedPageRowBox  .slider::-webkit-scrollbar { width: 0 !important;display: none; }
+
+.SavedPageRowBox   .hoverImage{overflow-wrap: break-word;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;color:white;position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;}
+ .SavedPageRowBox  .hoverImage .title{overflow-wrap: break-word;display:flex;flex-wrap:wrap;text-align:center;}
+/* .hoverImage .title{flex;flex-wrap:wrap;} */
+ .SavedPageRowBox  .hoverImage:hover{background:rgba(0,0,0,0.7);opacity:1;}
+ .SavedPageRowBox  .hoverImage .heartSave{position:absolute;top:20px;left:20px;}
+
+                 /* left arrow in row image */
+.MdChevronLeft{margin-left:10px;cursor:pointer;opacity:0.7;display:none;background:white;width:30px;height:30px;position:absolute;left:0;z-index:2;border-radius:50%;}
+.MdChevronLeft:hover{opacity:1;}
+
+.SavedPageRowBox:hover .MdChevronLeft{display:block;}
+
+                /* right arrow image */
+.MdChevronRight{margin-right:10px;cursor:pointer;opacity:0.7;display:none;background:white;width:30px;height:30px;position:absolute;right:0;z-index:2;border-radius:50%;}
+.MdChevronRight:hover{opacity:1;}
+
+.SavedPageRowBox:hover .MdChevronRight{display:block;}
+.SavedPageRowBox .cross{position:absolute;color:white;top:15px;right:20px;}
+
+
+@media only screen and ((max-height:450px) and (max-width:600px)){
+
+.savedFile .blackScreen .content{font-size:1.1rem;padding:10px 20px;}
+
+/* Saved file */
+ .SaverowWise{font-size:1.5rem;padding:15px 0px 0px 0px;margin-left:20px;}
+.SavedPageRowBox{margin-left:20px;margin-bottom:10px;}
+ .SavedPageRowBox  .slider .sliderContent{width:130px;padding:10px 10px 10px 0px;}
+ .SavedPageRowBox  .hoverImage .title{font-size:0.7rem;}
+
+                 /* left arrow in row image */
+.MdChevronLeft{margin-left:10px;width:30px;height:30px;left:0;}
+                /* right arrow image */
+.MdChevronRight{margin-right:10px;width:30px;height:30px;position:absolute;right:0;}
+.SavedPageRowBox .cross{position:absolute;top:15px;right:25px;height:5px !important;width:5px !important;}
+}
+
+@media only screen and ((max-height:450px) and (max-width:440px)){
+
+  .savedFile .blackScreen .content{font-size:1.1rem;padding:10px 15px;}
+  
+  /* Saved file */
+   .SaverowWise{font-size:1.5rem;padding:15px 0px 0px 0px;margin-left:15px;}
+  .SavedPageRowBox{margin-left:15px;margin-bottom:10px;}
+  .SavedPageRowBox  .hoverImage .title{font-size:0.6rem;}
+                
+  
+  }
+  @media only screen and ((max-height:450px) and (max-width:390px)){
+
+    .savedFile .blackScreen .content{font-size:1rem;padding:10px 15px;}
+    
+    /* Saved file */
+     .SaverowWise{font-size:1.3rem;padding:10px 0px 0px 0px;margin-left:15px;}
+    .SavedPageRowBox{margin-left:15px;margin-bottom:10px;}
+    .SavedPageRowBox  .slider .sliderContent{width:100px;padding:10px 10px 10px 0px;}
+                  
+    
+    }
+    @media only screen and ((max-height:450px) and (max-width:260px)){
+
+      .savedFile .blackScreen .content{font-size:0.7rem;padding:10px 15px;}
+      
+      /* Saved file */
+       .SaverowWise{font-size:1rem;padding:10px 0px 0px 0px;margin-left:15px;}
+      .SavedPageRowBox{margin-left:15px;margin-bottom:10px;}
+      .SavedPageRowBox  .slider .sliderContent{width:80px;padding:10px 10px 10px 0px;}
+      .SavedPageRowBox  .hoverImage .title{font-size:0.5rem;}
+      .SavedPageRowBox .cross{width:5px !important;height:5px !important;position:absolute;top:10px;right:25px;}
+                    
+      
+      }
+  
+  
+
+
+
+
+
+
+/* to hide scroll ::backdrop
+.slider{ overflow-x:scroll; -ms-overflow-style: none;  }
+.slider::-webkit-scrollbar { width: 0 !important;display: none; } */
